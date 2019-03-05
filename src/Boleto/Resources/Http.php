@@ -1,6 +1,6 @@
 <?php
 
-namespace SicrediAPI\Resources;
+namespace SicrediBoletoWS\Resources;
 
 /**
  * @package Library
