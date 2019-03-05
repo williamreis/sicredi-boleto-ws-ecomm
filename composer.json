@@ -1,5 +1,5 @@
 {
-  "name": "williamreis/sicredi-ws-ecomm",
+  "name": "williamreis/sicredi-boleto-ws-ecomm",
   "description": "Integração com Webservice Sicredi - Boleto Registrado",
   "licence": "MIT",
   "type": "library",
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "SicrediAPI\\": "src/WS"
+      "SicrediBoletoWS\\": "src/Boleto"
     }
   }
 }
