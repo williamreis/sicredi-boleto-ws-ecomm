@@ -1,0 +1,23 @@
+{
+  "name": "williamreis/sicredi-ws-ecomm",
+  "description": "Integração com Webservice Sicredi - Boleto Registrado",
+  "licence": "MIT",
+  "type": "library",
+  "keywords": ["boleto", "sicredi"],
+  "authors": [
+    {
+      "name": "William Reis",
+      "email": "williams.reis@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "~5.6|~7.0"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "SicrediAPI\\": "src/WS"
+    }
+  }
+}
