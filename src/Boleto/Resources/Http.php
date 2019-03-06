@@ -104,6 +104,7 @@ class Http
      */
     private function curlConnection($method, $url, $timeout, $charset, $data = null)
     {
+        $urlBase = 'https://cobrancaonline.sicredi.com.br/sicredi-cobranca-ws-ecomm-api/ecomm/v1/boleto/' . $url;
         if (strtoupper($method) === 'POST') {
             if ($this->contentType === 'Content-Type: application/json;') {
                 $postFields = json_encode($data);
@@ -134,9 +135,11 @@ class Http
                 CURLOPT_HTTPGET => true,
             ];
         }
+
+
         $options = [
             CURLOPT_HTTPHEADER => $this->setHeader($charset, $contentLength),
-            CURLOPT_URL => $url,
+            CURLOPT_URL => $urlBase,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_HEADER => false,
             CURLOPT_SSL_VERIFYPEER => false,

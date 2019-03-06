@@ -2,6 +2,9 @@
 
 namespace SicrediBoletoWS;
 
+use SicrediBoletoWS\Resources\Http;
+
+
 /**
  * @package Library
  * @category Pagamento
@@ -10,7 +13,7 @@ namespace SicrediBoletoWS;
  * @version 1.1.0
  * @since 1.1.0
  */
-class StatusService
+class ComandoInstrucao
 {
     private $urlBase;
 
@@ -24,9 +27,10 @@ class StatusService
     /** Cria um ID para comunicação com Checkout Transparente
      * @return id string
      */
-    public function health()
+    public function consulta($data)
     {
         $url = $this->urlBase . '/health';
-        \SicrediAPI\Resources\Http::post($url, $data = null, $timeout = 20, $charset = 'ISO-8859-1');
+        $response = Http::get($url, $data);
+        return $response;
     }
 }
